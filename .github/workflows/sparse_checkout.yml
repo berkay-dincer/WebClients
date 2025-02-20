@@ -16,7 +16,7 @@ jobs:
             packages/colors
             packages/components
           fetch-depth: 0
-          ref: master
+          ref: main
 
       - name: Run analyze
         run: npx @omlet/cli@1.13.2 analyze --dry-run
