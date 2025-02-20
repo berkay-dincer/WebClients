@@ -1,0 +1,13 @@
+name: Checkout
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run analyze
+        run: npx @omlet/cli@1.13.2 analyze --dry-run

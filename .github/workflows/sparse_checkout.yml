@@ -1,0 +1,22 @@
+name: Sparse Checkout
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .git
+            packages/atoms
+            packages/activation
+            packages/colors
+            packages/components
+          fetch-depth: 0
+          ref: master
+
+      - name: Run analyze
+        run: npx @omlet/cli@1.13.2 analyze --dry-run
