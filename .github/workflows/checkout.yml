@@ -1,7 +1,7 @@
 name: Checkout
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
 jobs:
   analyze:
     runs-on: ubuntu-latest
