@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/omletrc.json",
+    "ignore": [
+    "**/activation/**",
+    "**/calendar/**",
+    "**/colors/**",
+    "**/components/**"
+  ]
+}
